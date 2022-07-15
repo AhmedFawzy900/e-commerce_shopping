@@ -146,13 +146,13 @@ sizeFilter.addEventListener("change", getProductsFilteredBySize);
 
 function getProductsFilteredBySize(e) {
   let val = e.target.value;
-  let products = JSON.parse(localStorage.getItem("products")) || products;
+  let productes = JSON.parse(localStorage.getItem("products")) || products;
 
   if (val === "all") {
-    drawProductsUI(products);
+    drawProductsUI(productes);
   } else {
-    products = products.filter((i) => i.size === val);
-    drawProductsUI(products);
+    productes = productes.filter((i) => i.size === val);
+    drawProductsUI(productes);
   }
 }
 
