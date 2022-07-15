@@ -94,7 +94,7 @@ function saveItemData(id) {
 let input = document.getElementById("search");
 
 input.addEventListener("keyup", function (e) {
-  search(e.target.value, JSON.parse(localStorage.getItem("products")));
+  search(e.target.value, JSON.parse(localStorage.getItem("products")) || products);
 
   if (e.target.value.trim() === "")
     drawProductsUI(JSON.parse(localStorage.getItem("products")));
